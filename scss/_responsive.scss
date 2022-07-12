@@ -1,0 +1,65 @@
+@include media-md{
+    .menu-btn{
+        visibility: hidden;
+    }
+
+    .nav{
+        visibility: visible;
+        opacity: 1;
+        .menu-nav{
+            display: block;
+            transform: translateX(0);
+            height: 100%;
+            text-align: right;
+            overflow: visible;
+            background: transparent;
+            &_item{
+                display: inline;
+                padding-right: 1.5rem;
+            }
+            &_link{
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .about_bio{
+        font-size: 1.5rem;
+    }
+
+    .projects{
+        &_items{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .text-secondary{
+            font-size: 3rem;
+        }
+    }
+
+    .form{
+        margin-top: 2rem;
+        &_contact{
+            padding: 0;
+            gap: 1.5rem;
+        }
+        &_label{
+            font-size: 1.2rem;
+        }
+        &_input{
+            height: 5%;
+            font-size: 1.2rem;
+        }
+        &_btn{
+            margin: 1.5rem auto;
+            transform: scale(1.2);
+        }
+    }
+}
+
+@include media-lg{
+    .projects{
+        &_items{
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}

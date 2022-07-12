@@ -1,0 +1,67 @@
+.form{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &_header{
+        height: 20%;
+        width: 100%;
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    &_underline{
+        border: 1px solid $third-color;
+        background-color: $third-color;
+        width: 15%;
+        margin-top: 1rem;
+    }
+
+    &_contact{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        background: lighten($color: ($primary-color), $amount: 10%);
+        padding: 3rem;
+        border-top: 3px solid $secondary-color;
+    }
+
+    &_label{
+        color: $secondary-color;
+    }
+
+    &_input{
+        background-color: lighten($color: #000000, $amount: 40%);
+        width: 70%;
+        @include transition-ease;
+        &:focus{
+            border-top: $third-color solid 2px;
+            outline-width: 0;
+            background-color: whitesmoke;
+        }
+    }
+
+    &_btn{
+        & button{
+            padding: 0.5rem 0.75rem;
+            border-radius: 5px;
+            background-color: $third-color;
+            cursor: pointer;
+            border: none;
+            @include transition-ease;
+
+            &:hover{
+                transform: scale(1.1);
+                background-color: $secondary-color;
+            }
+        }
+    }
+}
